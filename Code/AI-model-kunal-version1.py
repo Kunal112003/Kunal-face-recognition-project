@@ -58,13 +58,13 @@ while True:
     similarity = 1 - cosine(reference_face.flatten(), video_face_resized.flatten())
 
     # Define a threshold for recognition
-    recognition_threshold = 0.7  # Adjust as needed
-
+    recognition_threshold = 0.75  # Adjust as needed
+    print("similarity=",similarity)
     if similarity >= recognition_threshold:
         # Recognized face
         cv2.rectangle(video_frame, (x_video, y_video), (x_video + w_video, y_video + h_video), (0, 255, 0), 2)
         cv2.putText(video_frame, "Kunal", (x_video, y_video), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-        print("Recognized")
+      
     else:
         # Unknown face
         cv2.rectangle(video_frame, (x_video, y_video), (x_video + w_video, y_video + h_video), (0, 0, 255), 2)
