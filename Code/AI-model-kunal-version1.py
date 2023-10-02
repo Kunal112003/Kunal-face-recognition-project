@@ -72,7 +72,7 @@ while True:
 
     # Display the video frame
     cv2.imshow("Video", video_frame)
-
+    
     # Wait for a key press to exit
     if cv2.waitKey(1) & 0xFF == ord("q"):
         break
