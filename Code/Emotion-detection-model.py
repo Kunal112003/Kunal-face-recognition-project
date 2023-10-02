@@ -72,4 +72,5 @@ video_capture = cv2.VideoCapture(0)
 emotions_label = ['Angry', 'Disgust', 'Fear', 'Happy', 'Neutral', 'Sad', 'Surprise']
 
 while True:
-
+    
+    
